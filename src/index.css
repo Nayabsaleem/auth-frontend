@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fallback styling if Tailwind isn't configured */
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: #f8fafc;
+  color: #0f172a;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 32px auto;
+  padding: 16px;
+}
+.card {
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(2,6,23,0.06);
+}
+.btn {
+  display:inline-block;
+  padding: 8px 14px;
+  border-radius: 6px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.field {
+  display:block;
+  width:100%;
+  padding:8px;
+  margin:8px 0 16px 0;
+  border-radius:6px;
+  border:1px solid #e6eef8;
+}
+.flex {
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
