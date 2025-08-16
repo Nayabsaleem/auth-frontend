@@ -7,6 +7,7 @@ import Navbar from './components/Navbar';
 import PublicProfile from './pages/PublicProfile';
 import api, { getProfile } from './api/api';
 
+
 function Home({ user, onAuth, onLogout }) {
   const [profile, setProfile] = useState(null);
 
@@ -14,7 +15,7 @@ function Home({ user, onAuth, onLogout }) {
     async function load() {
       try {
         if (!user) return;
-        const res = await api.get(`/profiles/${user.id || user._id}`);
+        const res = await api.get(`/profiles/public/${user.id || user._id}`);
         setProfile(res.data);
       } catch (err) {
         console.warn('No profile found or fetch error', err);
@@ -59,6 +60,7 @@ export default function App() {
     localStorage.removeItem('token');
     navigate('/');
   }
+  
 
   return (
     <div>
@@ -70,4 +72,6 @@ export default function App() {
       </Routes>
     </div>
   );
+
+
 }
